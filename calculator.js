@@ -6,9 +6,7 @@ window.onload = function (){
 	for(var i=0;i<buttons.length;i++){
 		  if(buttons[i].value === '='){
 			    buttons[i].addEventListener("click", calculate());
-		  } else if(buttons[i].id==='clear'){
-        buttons[i].addEventListener("click",clearDisplay());
-      } else{
+      }else{
 			   buttons[i].addEventListener("click", addToDisplay(i));
 		  }
 	}
@@ -19,14 +17,18 @@ window.onload = function (){
                displayScreen.value  +=  "/ " ;
       }else if(buttons[i].value === "x"){
 			      displayScreen.value += "*";
-		   } else{
+		   } else if(buttons[i].value==="c"){
+         displayScreen.value="";
+       }else{
 			   displayScreen.value  += buttons[i].value;
 		   }
 	  };
    }
 
-   function clearDisplay(){
-     displayScreen.value="";
-   }
+  /* function clearDisplay(){
+    displayScreen.value="";
+  //  document.getElementById('display').value =' ';
+}*/
+
 
   };
