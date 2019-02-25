@@ -2,7 +2,7 @@ window.onload = function (){ // Run code once the page is loaded.
 	var buttons = document.getElementsByTagName("input"); // Getting an array of all "input" elements.
 	var displayScreen = buttons[0]; // assigning the first input element which is the display screen to a variable.
 	var clear = document.getElementById('clear'); // The clear (c) button.
-
+  var isFirst=true;
 	for(var i=0;i<buttons.length;i++){ // A loop to add onClick listeners to the buttons.
 		  if(buttons[i].value === '='){ // If the '=' button is clicked then the onclick function will be "calculate()" which I haven't done yet :D
 			    buttons[i].addEventListener("click", calculate());
@@ -14,12 +14,12 @@ window.onload = function (){ // Run code once the page is loaded.
 	function addToDisplay (i){ //This function adds the clicked button value to the display screen, except for 'clear' which clears the display screen for sure.
 		return function(){
 			if (buttons[i].value === "÷") {
-               displayScreen.value  +=  "/ " ;
+        displayScreen.value  +=  "/ " ;
       }else if(buttons[i].value === "x"){
-			      displayScreen.value += "*";
-		   } else if(buttons[i].value==="c"){
+        displayScreen.value += "*";
+		  } else if(buttons[i].value==="c"){
          displayScreen.value="";
-       }else{
+      } else{
 			   displayScreen.value  += buttons[i].value;
 		   }
 	  };
@@ -30,6 +30,9 @@ window.onload = function (){ // Run code once the page is loaded.
     displayScreen.value="";
   //  document.getElementById('display').value =' ';
 }*/
-
+function calculate(){
+  displayScreen.value=eval(displayScreen.value);
+//  if(displayScreen.value==undefined)displayScreen.value=" ";
+}
 
   };
