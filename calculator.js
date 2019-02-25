@@ -5,8 +5,10 @@ window.onload = function (){
 
 	for(var i=0;i<buttons.length;i++){
 		  if(buttons[i].value === '='){
-			    buttons[i].addEventListener("click", calculate(i));
-		  }else{
+			    buttons[i].addEventListener("click", calculate());
+		  } else if(buttons[i].id==='clear'){
+        buttons[i].addEventListener("click",clearDisplay());
+      } else{
 			   buttons[i].addEventListener("click", addToDisplay(i));
 		  }
 	}
@@ -22,3 +24,9 @@ window.onload = function (){
 		   }
 	  };
    }
+
+   function clearDisplay(){
+     displayScreen.value="";
+   }
+
+  };
