@@ -3,44 +3,44 @@
     <head>
 
       <link rel="stylesheet" type="text/css" href="style.css">
-
+      <script src="calculator.js"></script>
         <title>ezCalculator</title>
     </head>
     <body>
-        <div id='calc-contain'>
+        <div id="calc-contain">
 
-          <form name="calculator">
+          <form name="calculator" id="calculator">
 
-            <input type="text" name="answer" id="cc" />
-            <br>
-
-            <input type="button" value="1"  />
-            <input type="button" value="2" />
-            <input type="button" value="3"  />
-            <input type="button" value="+" data-action="add"/>
+            <input type="text" name="display" id="display" value="" disabled/>
+            <br/>
+            <div id="calkeys">
+            <input  type="button" value="1" />
+            <input  type="button" value="2" />
+            <input  type="button" value="3" />
+            <input  type="button" value="+" />
             <br/>
 
-            <input type="button" value="4"  />
-            <input type="button" value="5"  />
-            <input type="button" value="6"  />
-            <input type="button" value="-" data-action="subtract"/>
-            </br>
+            <input  type="button" value="4" />
+            <input  type="button" value="5"  />
+            <input  type="button" value="6"  />
+            <input  type="button" value="-" />
+            <br/>
 
-            <input type="button" value="7" />
-            <input type="button" value="8"  />
-            <input type="button" value="9"/>
-            <input type="button" value="x"  data-action="multiply"/>
-            </br>
+            <input  type="button" value="7" />
+            <input  type="button" value="8"  />
+            <input  type="button" value="9" />
+            <input  type="button" value="x"  />
+            <br/>
 
-            <input type="button" value="c" data-action="clear"/>
-            <input type="button" value="0"  />
-            <input type="button" value="=" />
-            <input type="button" value="/" data-action="divide"/>
-            </br>
+            <input id="clear" type="button" value="c" />
+            <input  type="button" value="0"  />
+            <input  type="button" value="=" />
+            <input  type="button" value="/" />
+            <br/>
 
-
+          </div>
           </form>
 
         </div>
     </body>
-</html>ls
+</html>
