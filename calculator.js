@@ -1,27 +1,24 @@
-function op(num1,num2,op){
-  results=0;
-  switch(op){
-    case '+':
-    results = num1+num2;
-    break;
-    case '-':
-    results=num1-num2;
-    break;
-    case '*':
-    results=num1*num2;
-    break;
-    case '/':
-    results=num1/num2;
-    break;
-    default: results= null;
-  }
-  function checkBrackets(exStr){
-    let c=0;
-    for(let i=0;i<exStr.length;i++){
-      if(exStr[i]=='(')c++;
-      else if(exStr[i]==')')c--;
-    }
-    if(c!=0)return false;
-    else return true;
-  }
-}
+window.onload = function (){
+	var buttons = document.getElementsByTagName("input");
+	var displayScreen = buttons[0];
+	var clear = document.getElementById('clear')[0];
+
+	for(var i=0;i<buttons.length;i++){
+		  if(buttons[i].value === '='){
+			    buttons[i].addEventListener("click", calculate(i));
+		  }else{
+			   buttons[i].addEventListener("click", addToDisplay(i));
+		  }
+	}
+
+	function addToDisplay (i){
+		return function(){
+			if (buttons[i].value === "÷") {
+               displayScreen.value  +=  "/ " ;
+      }else if(buttons[i].value === "x"){
+			      displayScreen.value += "*";
+		   } else{
+			   displayScreen.value  += buttons[i].value;
+		   }
+	  };
+   }
