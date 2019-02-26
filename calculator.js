@@ -18,6 +18,7 @@ window.onload = function (){ // Run code once the page is loaded.
 
 	function addToDisplay (i){ //This function adds the clicked button value to the display screen, except for 'clear' which clears the display screen for sure.
 		return function(){
+			if(displayScreen.value=="NaN")clearDisplay();
 			if (buttons[i].value === "\/") {
 				if(turnOp==='o'){
         displayScreen.value  +=  "/" ;
