@@ -11,7 +11,8 @@
   --pure-black-alpha: rgba(19, 19, 19, .64);
   --pure-black-alpha-light: rgba(19, 19, 19, .24);
   --pure-black-alpha-transparent: rgba(19, 19, 19, .12);
-
+  @purple: #5C258D;
+  @blue: #4389A2;
   --primary: #d63c6b;
   --primary-dk: #c41c4f;
   --accent: #5cc8ff;
@@ -42,6 +43,8 @@ body{
   border: 2px solid black;
   border-radius: 12px;
   margin: 0px auto;
+    background-color: #F3EEE7;
+
   padding: 20px 20px 100px 20px;
 }
 #agh{
@@ -55,7 +58,7 @@ body{
 }
 
 input[type=text] {
-  background-color: #22e8e3;
+  background-color: #C7C7B0;
 
 }
 input[type=button] {
@@ -83,6 +86,13 @@ input[type=button]:active {
 input[type=button]:hover {
   background-color: #003300;
   color: white;
+}
+
+#clear{
+
+background-color:#CC4E5F;
+
+
 }
 
 input[type = text] {
