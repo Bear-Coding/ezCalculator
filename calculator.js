@@ -139,6 +139,8 @@ function changeTurn(){
 }
 function clearLast(){
 	displayScreen.value=displayScreen.value.substring(0,displayScreen.value.length-1);
+	if(displayScreen.value[displayScreen.value.length-1]<'0' || displayScreen.value[displayScreen.value.length-1]>'9')turnOp="n";
+	
 }
 
   };
