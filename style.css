@@ -88,13 +88,16 @@ input[type=button]:hover {
   color: white;
 }
 
-#clear{
+  #clear{
 
-background-color:#CC4E5F;
+    background-color:#CC4E5F;
 
 
-}
+      }
+  #eq{
+       background-color:#fe886a;
 
+    }
 input[type = text] {
   position: relative;
   display: block;
