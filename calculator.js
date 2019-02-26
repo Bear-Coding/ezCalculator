@@ -23,10 +23,7 @@ window.onload = function (){ // Run code once the page is loaded.
       }else if(buttons[i].value === "x"){
 					if(turnOp=='o'){
         displayScreen.value += "*";
-				turnOp='n';
-			}
-		} else if(buttons[i].value==="C"){
-					turnOp='n';
+		  } else if(buttons[i].value==="C"){
          //displayScreen.value="";
          clearDisplay();
       }else if(buttons[i].value=="+"){
