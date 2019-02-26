@@ -15,28 +15,30 @@ window.onload = function (){ // Run code once the page is loaded.
 
 	function addToDisplay (i){ //This function adds the clicked button value to the display screen, except for 'clear' which clears the display screen for sure.
 		return function(){
-			if (buttons[i].value === "÷") {
-				if(turnOp=='o'){
-        displayScreen.value  +=  "/ " ;
-				turnOp='n';
-			}
+			if (buttons[i].value === "\/") {
+				if(turnOp==='o'){
+        displayScreen.value  +=  "/" ;
+				changeTurn();
+				}
       }else if(buttons[i].value === "x"){
-					if(turnOp=='o'){
+				if(turnOp==='o'){
         displayScreen.value += "*";
-				turnOp='n';
-		  }
-		}else if(buttons[i].value==="C"){
+				changeTurn();
+		  	}
+			}
+		else if(buttons[i].value==="C"){
          //displayScreen.value="";
          clearDisplay();
       }else if(buttons[i].value=="+"){
-				if(turnOp=='o'){
+					if(turnOp=='o'){
 					displayScreen.value+="+";
-					turnOp='n';
+					changeTurn();
+					}
 				}
-			}else if(buttons[i].value=="-"){
+			else if(buttons[i].value=="-"){
 				if(turnOp=='o'){
 					displayScreen.value+="-";
-					turnOp='n';
+					changeTurn();
 				}
 			}
 			else {
@@ -70,6 +72,11 @@ function calculate(){
 //  if(displayScreen.value==undefined)displayScreen.value=" ";
 }
 
-
+function changeTurn(){
+	if(turnOp==='o')turnOp='n';
+	else {
+		turnOp='o';
+	}
+}
 
   };
