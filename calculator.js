@@ -58,7 +58,7 @@ window.onload = function (){ // Run code once the page is loaded.
 			}
 			else if(buttons[i].value=="("){
 				decimal=false;
-				if(displayScreen.value[displayScreen.value.length-1] >'0' ||displayScreen.value[displayScreen.value.length-1]<'9'){
+				if(displayScreen.value[displayScreen.value.length-1] >='0' && displayScreen.value[displayScreen.value.length-1]<='9'){
 				displayScreen.value+="*(";
 			}else{
 				displayScreen.value+="(";
