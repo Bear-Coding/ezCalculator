@@ -75,7 +75,11 @@ window.onload = function (){ // Run code once the page is loaded.
 					}
 
          isFirst=false;
+				 if(displayScreen.value[displayScreen.value.length-1]===')'){
+					 displayScreen.value  += '*'+buttons[i].value;
+				 }else {
 			   displayScreen.value  += buttons[i].value;
+			 }
 				 turnOp='o';
 			 }
 		 };
