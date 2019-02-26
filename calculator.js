@@ -47,17 +47,17 @@ window.onload = function (){ // Run code once the page is loaded.
 				}
 			else if(buttons[i].value=="-"){
 					decimal=false;
-					if(turnOp=='o'){
+					if(turnOp=='o' || displayScreen.value.length==0){
 					if(displayScreen.value[displayScreen.value.length-1]!='-' ){
 					displayScreen.value+="-";
-					//changeTurn();
+					//changeTurn(); We don't have to change turn because we must be able to add another minus
 					}
 				else {
 					clearLast();
 					displayScreen.value+='+';
 					changeTurn();
 				}
-				}
+			}
 			}
 			else if(buttons[i].value=="("){
 				decimal=false;
