@@ -3,6 +3,7 @@ window.onload = function (){ // Run code once the page is loaded.
 	var displayScreen = buttons[0]; // assigning the first input element which is the display screen to a variable.
 	var clear = document.getElementById('clear'); // The clear (c) button.
   var isFirst=false;
+	var turnOp='n'; // n stands for number, o stands for operation - I use this to check what input we are looking for to avoid errors.
   //var opWithoutNum=false;
 	for(var i=0;i<buttons.length;i++){ // A loop to add onClick listeners to the buttons.
 		  if(buttons[i].value === '='){ // If the '=' button is clicked then the onclick function will be "calculate()" which I haven't done yet :D
@@ -15,23 +16,47 @@ window.onload = function (){ // Run code once the page is loaded.
 	function addToDisplay (i){ //This function adds the clicked button value to the display screen, except for 'clear' which clears the display screen for sure.
 		return function(){
 			if (buttons[i].value === "÷") {
+				if(turnOp=='o'){
         displayScreen.value  +=  "/ " ;
+				turnOp='n';
+			}
       }else if(buttons[i].value === "x"){
+					if(turnOp=='o'){
         displayScreen.value += "*";
-		  } else if(buttons[i].value==="c"){
+				turnOp='n';
+			}
+		} else if(buttons[i].value==="C"){
+					turnOp='n';
          //displayScreen.value="";
          clearDisplay();
-      } else{
-        if(isFirst)clearDisplay();
-        isFirst=false;
+      }else if(buttons[i].value=="+"){
+				if(turnOp=='o'){
+					displayScreen.value+="+";
+					turnOp='n';
+				}
+			}else if(buttons[i].value=="-"){
+				if(turnOp=='o'){
+					displayScreen.value+="-";
+					turnOp='n';
+				}
+			}
+			else {
+        if(isFirst){
+					clearDisplay();
+					}
+
+         isFirst=false;
 			   displayScreen.value  += buttons[i].value;
+				 turnOp='o';
+			 }
 		   }
 	  };
-   }
+
 
 // Clear method that didn't work :( new method above ^ ---nvm
    function clearDisplay(){
     displayScreen.value="";
+		turnOp='n';
   //  document.getElementById('display').value =' ';
 }
 function calculate(){
@@ -45,5 +70,7 @@ function calculate(){
 };
 //  if(displayScreen.value==undefined)displayScreen.value=" ";
 }
+
+
 
   };
