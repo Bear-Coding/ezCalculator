@@ -1,9 +1,11 @@
 window.onload = function (){ // Run code once the page is loaded.
 	var buttons = document.getElementsByTagName("input"); // Getting an array of all "input" elements.
 	var displayScreen = buttons[0]; // assigning the first input element which is the display screen to a variable.
-	var clear = document.getElementById('clear'); // The clear (c) button.
+//	var clear = document.getElementById('clear'); // The clear (c) button.
+	//var clearLastbtn = document.getElementById('clear2');
   var isFirst=false;
 	var turnOp='n'; // n stands for number, o stands for operation - I use this to check what input we are looking for to avoid errors.
+	var bracketsCount=0;
   //var opWithoutNum=false;
 	for(var i=0;i<buttons.length;i++){ // A loop to add onClick listeners to the buttons.
 		  if(buttons[i].value === '='){ // If the '=' button is clicked then the onclick function will be "calculate()" which I haven't done yet :D
@@ -29,17 +31,39 @@ window.onload = function (){ // Run code once the page is loaded.
 		else if(buttons[i].value==="C"){
          //displayScreen.value="";
          clearDisplay();
-      }else if(buttons[i].value=="+"){
+      }else if(buttons[i].value==="AC"){
+				clearLast();
+			}
+			else if(buttons[i].value=="+"){
 					if(turnOp=='o'){
 					displayScreen.value+="+";
 					changeTurn();
 					}
 				}
 			else if(buttons[i].value=="-"){
-				if(turnOp=='o'){
+			//	if(turnOp=='o'){
+			if(displayScreen.value[displayScreen.value.length-1]!='-'){
 					displayScreen.value+="-";
 					changeTurn();
+				}else {
+					clearLast();
+					displayScreen.value+='+';
+
 				}
+			//	}
+			}
+			else if(buttons[i].value=="("){
+				displayScreen.value+="(";
+				bracketsCount++;
+			}
+			else if(buttons[i].value==")"){
+				displayScreen.value+=")";
+				bracketsCount--;
+			}
+			else if(buttons[i].value=="^"){
+				if(turnOp=="o"){
+				displayScreen.value+="**";
+			}
 			}
 			else {
         if(isFirst){
@@ -63,8 +87,10 @@ window.onload = function (){ // Run code once the page is loaded.
 function calculate(){
 
   return function(){
-    if(displayScreen.value[displayScreen.value.length-1]<'0' || displayScreen.value[displayScreen.value.length]>'9'){
+    if(displayScreen.value[displayScreen.value.length-1]<'0' || displayScreen.value[displayScreen.value.length-1]>'9'){
+		 if(displayScreen.value[displayScreen.value.length-1]!==')')
       return(alert("Invalid expression, the input should end with a number"));
+			if(bracketsCount!=0)return(alert("Fix your brackets, please"));
     }
       isFirst=true;
   displayScreen.value=eval(displayScreen.value);
@@ -77,6 +103,9 @@ function changeTurn(){
 	else {
 		turnOp='o';
 	}
+}
+function clearLast(){
+	displayScreen.value=displayScreen.value.substring(0,displayScreen.value.length-1);
 }
 
   };
