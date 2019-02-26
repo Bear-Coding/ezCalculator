@@ -94,8 +94,36 @@ input[type=button]:hover {
 
 
       }
+
+#one{
+
+  background: #FF8C00;
+	color: #FFFFFF;
+}
+
+
+
+  #two{
+    background: #FF8C00;
+	color: #FFFFFF;
+  }
+
+  #three{
+    background: #FF8C00;
+    	color: #FFFFFF;
+
+  }
+
+  #four{
+    background: #FF8C00;
+    	color: #FFFFFF;
+
+  }
+
+
+
   #eq{
-       background-color:#fe886a;
+       background-color:#FF8C00;
 
     }
 input[type = text] {
