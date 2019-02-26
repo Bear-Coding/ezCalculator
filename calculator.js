@@ -84,9 +84,11 @@ window.onload = function (){ // Run code once the page is loaded.
 		}
 			else {
 
-        if(isFirst && buttons[i].value >='0' && buttons[i].value<='9'){
+        if(isFirst && displayScreen.value[displayScreen.value.length-1]>='0' && displayScreen.value[displayScreen.value.length-1]<='9'){
+
 					clearDisplay();
-					}
+
+				}
 
          isFirst=false;
 				 if(displayScreen.value[displayScreen.value.length-1]===')'){
@@ -101,7 +103,7 @@ window.onload = function (){ // Run code once the page is loaded.
 
 
 // Clear method that didn't work :( new method above ^ ---nvm
-   function clearDisplay(){
+ function clearDisplay(){
     displayScreen.value="";
 		turnOp='n';
   //  document.getElementById('display').value =' ';
