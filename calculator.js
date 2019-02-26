@@ -38,7 +38,7 @@ function calculate(){
 
   return function(){
     if(displayScreen.value[displayScreen.value.length-1]<'0' || displayScreen.value[displayScreen.value.length]>'9'){
-      return(alert("Invalid expression, please end with number"));
+      return(alert("Invalid expression, the input should end with a number"));
     }
       isFirst=true;
   displayScreen.value=eval(displayScreen.value);
