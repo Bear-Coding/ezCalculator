@@ -91,6 +91,7 @@ input[type=button]:hover {
   #clear{
     background-color:#CC4E5F;
     width: 44%;
+    color:white;
       }
 
 #one{
@@ -116,8 +117,20 @@ input[type=button]:hover {
     	color: #FFFFFF;
 
   }
+  #five{
+      background: #FF8C00;
+      	color: #FFFFFF;
+
+    }
+    #six{
+        background: #FF8C00;
+          color: #FFFFFF;
+
+      }
   #eq{
        background-color:#FF8C00;
+       color:white;
+       width: 92%;
     }
 
 input[type = text] {
