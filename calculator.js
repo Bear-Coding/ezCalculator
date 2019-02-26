@@ -53,7 +53,11 @@ window.onload = function (){ // Run code once the page is loaded.
 			//	}
 			}
 			else if(buttons[i].value=="("){
+				if(displayScreen.value[displayScreen.value.length-1] >'0' ||displayScreen.value[displayScreen.value.length-1]<'9'){
+				displayScreen.value+="*(";
+			}else{
 				displayScreen.value+="(";
+			}
 				bracketsCount++;
 			}
 			else if(buttons[i].value==")"){
