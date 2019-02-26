@@ -1,7 +1,7 @@
 
 
 :root {
-  /* color palette :: https://coolors.co/app/d63c6b-5cc8ff-efefef-292f36-d6d6d6 */
+
   --white: #efefef;
   --white-alpha: rgba(239, 239, 239, .64);
   --grey: #d6d6d6;
@@ -89,43 +89,37 @@ input[type=button]:hover {
 }
 
   #clear{
-
     background-color:#CC4E5F;
-
-
+    width: 44%;
       }
 
 #one{
-
   background: #FF8C00;
-	color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 
 
   #two{
     background: #FF8C00;
-	color: #FFFFFF;
+	  color: #FFFFFF;
   }
 
   #three{
     background: #FF8C00;
-    	color: #FFFFFF;
+    color: #FFFFFF;
 
   }
 
-  #four{
+#four{
     background: #FF8C00;
     	color: #FFFFFF;
 
   }
-
-
-
   #eq{
        background-color:#FF8C00;
-
     }
+
 input[type = text] {
   position: relative;
   display: block;
