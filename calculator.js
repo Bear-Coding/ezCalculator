@@ -67,6 +67,7 @@ window.onload = function (){ // Run code once the page is loaded.
 			else if(buttons[i].value=="^"){
 				if(turnOp=="o"){
 				displayScreen.value+="**";
+				turnOp="n";
 			}
 			}
 			else {
