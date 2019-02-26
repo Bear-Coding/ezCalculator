@@ -47,8 +47,8 @@ window.onload = function (){ // Run code once the page is loaded.
 			   displayScreen.value  += buttons[i].value;
 				 turnOp='o';
 			 }
-		   }
-	  };
+		 };
+	  }
 
 
 // Clear method that didn't work :( new method above ^ ---nvm
