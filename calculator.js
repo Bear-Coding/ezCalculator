@@ -18,7 +18,7 @@ window.onload = function (){ // Run code once the page is loaded.
         displayScreen.value  +=  "/ " ;
       }else if(buttons[i].value === "x"){
         displayScreen.value += "*";
-		  } else if(buttons[i].value==="c"){
+		  } else if(buttons[i].value==="C"){
          //displayScreen.value="";
          clearDisplay();
       } else{
