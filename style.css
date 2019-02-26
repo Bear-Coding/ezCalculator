@@ -84,7 +84,7 @@ input[type=button]:active {
   transform: translateY(4px);
 }
 input[type=button]:hover {
-  background-color: #003300;
+
   color: white;
 }
 
