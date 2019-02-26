@@ -6,6 +6,7 @@ window.onload = function (){ // Run code once the page is loaded.
   var isFirst=false;
 	var turnOp='n'; // n stands for number, o stands for operation - I use this to check what input we are looking for to avoid errors.
 	var bracketsCount=0;
+	var decimal =false;
   //var opWithoutNum=false;
 	for(var i=0;i<buttons.length;i++){ // A loop to add onClick listeners to the buttons.
 		  if(buttons[i].value === '='){ // If the '=' button is clicked then the onclick function will be "calculate()" which I haven't done yet :D
@@ -20,11 +21,13 @@ window.onload = function (){ // Run code once the page is loaded.
 			if (buttons[i].value === "\/") {
 				if(turnOp==='o'){
         displayScreen.value  +=  "/" ;
+				decimal=false;
 				changeTurn();
 				}
       }else if(buttons[i].value === "x"){
 				if(turnOp==='o'){
         displayScreen.value += "*";
+				decimal=false;
 				changeTurn();
 		  	}
 			}
@@ -37,10 +40,12 @@ window.onload = function (){ // Run code once the page is loaded.
 			else if(buttons[i].value=="+"){
 					if(turnOp=='o'){
 					displayScreen.value+="+";
+					decimal=false;
 					changeTurn();
 					}
 				}
 			else if(buttons[i].value=="-"){
+				decimal=false;
 			//	if(turnOp=='o'){
 			if(displayScreen.value[displayScreen.value.length-1]!='-'){
 					displayScreen.value+="-";
@@ -48,11 +53,11 @@ window.onload = function (){ // Run code once the page is loaded.
 				}else {
 					clearLast();
 					displayScreen.value+='+';
-
 				}
 			//	}
 			}
 			else if(buttons[i].value=="("){
+				decimal=false;
 				if(displayScreen.value[displayScreen.value.length-1] >'0' ||displayScreen.value[displayScreen.value.length-1]<'9'){
 				displayScreen.value+="*(";
 			}else{
@@ -61,15 +66,22 @@ window.onload = function (){ // Run code once the page is loaded.
 				bracketsCount++;
 			}
 			else if(buttons[i].value==")"){
+				decimal=false;
 				displayScreen.value+=")";
 				bracketsCount--;
 			}
 			else if(buttons[i].value=="^"){
 				if(turnOp=="o"){
+					decimal=false;
 				displayScreen.value+="**";
 				turnOp="n";
 			}
+		}else if(buttons[i].value=="."){
+			if(!decimal){
+				displayScreen.value+=".";
+				decimal=true;
 			}
+		}
 			else {
         if(isFirst){
 					clearDisplay();
