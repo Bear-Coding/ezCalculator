@@ -18,7 +18,7 @@ window.onload = function (){ // Run code once the page is loaded.
 
 	function addToDisplay (i){ //This function adds the clicked button value to the display screen, except for 'clear' which clears the display screen for sure.
 		return function(){
-			if(displayScreen.value=="NaN")clearDisplay();
+			if(displayScreen.value=="NaN, stop looking for bugs!" || displayScreen.value=="420, Smoke weed everyday!" || displayScreen.value=="911, Someone call 911 there's a bug!")clearDisplay();
 			if (buttons[i].value === "\/") {
 				if(turnOp==='o'){
         displayScreen.value  +=  "/" ;
@@ -114,9 +114,12 @@ window.onload = function (){ // Run code once the page is loaded.
 function calculate(){
 
   return function(){
-		if(eval(displayScreen.value)=="Infinity" || eval(displayScreen.value)=="-Infinity" || eval(displayScreen.value)=="undefined" || eval(displayScreen.value)=="NaN" || displayScreen.value=="NaN"){
-			return(displayScreen.value="NaN");
-		}
+		if(displayScreen.value=="NaN" || displayScreen.value=="NaN, stop looking for bugs!" || displayScreen.value=="911, Someone call 911 there's a bug!" ||
+		displayScreen.value=="420, Smoke weed everyday!" || eval(displayScreen.value)=="Infinity" || eval(displayScreen.value)=="-Infinity" ||
+		eval(displayScreen.value)=="undefined" || eval(displayScreen.value)=="NaN")
+			return(displayScreen.value="NaN, stop looking for bugs!");
+		if(eval(displayScreen.value)=="911")return(displayScreen.value="911, Someone call 911 there's a bug!");
+		if(eval(displayScreen.value)=="420")return(displayScreen.value="420, Smoke weed everyday!");
     if(displayScreen.value[displayScreen.value.length-1]<'0' || displayScreen.value[displayScreen.value.length-1]>'9'){
 		 if(displayScreen.value[displayScreen.value.length-1]!==')')
       return(alert("Invalid expression, the input should end with a number"));
@@ -140,7 +143,7 @@ function changeTurn(){
 function clearLast(){
 	displayScreen.value=displayScreen.value.substring(0,displayScreen.value.length-1);
 	if(displayScreen.value[displayScreen.value.length-1]<'0' || displayScreen.value[displayScreen.value.length-1]>'9')turnOp="n";
-	
+
 }
 
   };
