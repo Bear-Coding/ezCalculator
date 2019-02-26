@@ -83,7 +83,8 @@ window.onload = function (){ // Run code once the page is loaded.
 			}
 		}
 			else {
-        if(isFirst){
+
+        if(isFirst && buttons[i].value >='0' && buttons[i].value<='9'){
 					clearDisplay();
 					}
 
@@ -111,7 +112,7 @@ function calculate(){
     if(displayScreen.value[displayScreen.value.length-1]<'0' || displayScreen.value[displayScreen.value.length-1]>'9'){
 		 if(displayScreen.value[displayScreen.value.length-1]!==')')
       return(alert("Invalid expression, the input should end with a number"));
-			if(bracketsCount!=0)return(alert("Fix your brackets, please"));
+			if(bracketsCount!==0)return(alert("Fix your brackets, please"));
     }
       isFirst=true;
   displayScreen.value=eval(displayScreen.value);
