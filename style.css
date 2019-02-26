@@ -90,9 +90,14 @@ input[type=button]:hover {
 
   #clear{
     background-color:#CC4E5F;
-    width: 44%;
+    width: 20%;
     color:white;
       }
+      #clear2{
+        background-color:#CC4E5F;
+        width: 20%;
+        color:white;
+          }
 
 #one{
   background: #FF8C00;
