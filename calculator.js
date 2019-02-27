@@ -156,6 +156,8 @@ window.onload = function (){ // Run code once the page is loaded.
 		}
  		// Function that deletes only the last character.
 		function clearLast(){
+			if(displayScreen.value[displayScreen.value.length-1] == ")") bracketsCount++;
+			if(displayScreen.value[displayScreen.value.length-1] == "(") bracketsCount--;
 			displayScreen.value = displayScreen.value.substring(0,displayScreen.value.length-1);
 			if(displayScreen.value[displayScreen.value.length-1]<'0' || displayScreen.value[displayScreen.value.length-1]>'9' || displayScreen.value.length == 0)
 				turnOp="n";
