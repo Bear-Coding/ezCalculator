@@ -118,6 +118,7 @@ window.onload = function (){ // Run code once the page is loaded.
 	   }
 
  		function clearDisplay(){ // A function to clear the current display.
+			bracketsCount=0;
     	displayScreen.value="";
 			turnOp='n';
 		}
