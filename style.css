@@ -43,8 +43,7 @@ body{
   border: 2px solid black;
   border-radius: 12px;
   margin: 0px auto;
-    background-color: #F3EEE7;
-
+  background-color: #F3EEE7;
   padding: 20px 20px 100px 20px;
 }
 #agh{
@@ -88,46 +87,45 @@ input[type=button]:hover {
  color: white;
 }
 
-  #clear{
+ #clear{
     background-color:#CC4E5F;
     width: 20%;
     color:white;
       }
-      #clear2{
+ #clear2{
         background-color:#CC4E5F;
         width: 20%;
         color:white;
           }
 
-#one{
+  #plus{
   background: #FF8C00;
   color: #FFFFFF;
 }
 
 
-
-  #two{
+  #minus{
     background: #FF8C00;
 	  color: #FFFFFF;
   }
 
-  #three{
+  #multplie{
     background: #FF8C00;
     color: #FFFFFF;
 
   }
 
-#four{
+#divide{
     background: #FF8C00;
     	color: #FFFFFF;
 
   }
-  #five{
+  #power{
       background: #FF8C00;
       	color: #FFFFFF;
 
     }
-    #six{
+    #bracket1,#bracket2{
         background: #FF8C00;
           color: #FFFFFF;
 
