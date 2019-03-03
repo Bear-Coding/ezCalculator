@@ -98,34 +98,34 @@ input[type=button]:hover {
         color:white;
           }
 
-  #plus{
+  #one{
   background: #FF8C00;
   color: #FFFFFF;
 }
 
 
-  #minus{
+  #two{
     background: #FF8C00;
 	  color: #FFFFFF;
   }
 
-  #multplie{
+  #three{
     background: #FF8C00;
     color: #FFFFFF;
 
   }
 
-#divide{
+#four{
     background: #FF8C00;
     	color: #FFFFFF;
 
   }
-  #power{
+  #five{
       background: #FF8C00;
       	color: #FFFFFF;
 
     }
-    #bracket1,#bracket2{
+    #six{
         background: #FF8C00;
           color: #FFFFFF;
 
