@@ -1,7 +1,7 @@
 window.onload = function (){ // Run code once the page is loaded.
 
 	var buttons = document.getElementsByTagName("input"); // Getting an array of all "input" elements.
-	var displayScreen = document.getElementById('display'); // assigning the first input element which is the display screen to a variable.
+	var displayScreen =buttons[0]; // assigning the first input element which is the display screen to a variable.
   var isFirst = false; // true if its the first char in display scree, false if its not.
 	var turnOp = 'n'; // n stands for number, o stands for operation - I use this to check what input we are looking for to avoid errors.
 	var bracketsCount = 0; // increase 1 each time we add open bracket, decrease 1 each time we add close bracket.
